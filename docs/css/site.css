@@ -1,0 +1,338 @@
+/* Font: Work Sans */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+/* Genel */
+html, body {
+  margin: 0; padding: 0;
+  height: 100%;
+  background-color: #FAF5F0; /* çok açık şampanya pembesi */
+  color: #5A4A42; /* sıcak koyu kahverengi-pembe */
+  font-family: 'Work Sans', sans-serif; 
+  font-size: 16px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #F3D6C9 !important; /* yumuşak şampanya pembesi */
+    box-shadow: 0 2px 8px rgba(243, 214, 201, 0.5);
+}
+
+.navbar .nav-link {
+    color: #5A4A42; /* koyu sıcak kahverengi-pembe */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #D79A7E; /* pastel açık kahve-pembe */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #D79A7E; /* pastel kahve-pembe */
+    letter-spacing: 2px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.navbar-toggler {
+    border-color: #D79A7E;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23D79A7E' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Kartlar */
+.card {
+    background: #FFF8F2; /* çok açık krem-pembe */
+    color: #5A4A42;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(215, 154, 126, 0.3);
+    padding: 20px;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(215, 154, 126, 0.5);
+}
+
+/* Başlıklar */
+h1, h2, h3, h4 {
+    color: #D79A7E;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Butonlar */
+.btn-primary {
+    background-color: #F5C9B8; /* yumuşak şampanya pembesi */
+    border: none;
+    color: #5A4A42;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(215, 154, 126, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #D79A7E; /* koyu şampanya pembesi */
+    box-shadow: 0 10px 25px rgba(215, 154, 126, 0.6);
+    cursor: pointer;
+}
+
+/* Form input focus */
+.form-control:focus {
+    border-color: #D79A7E;
+    box-shadow: 0 0 8px #D79A7E;
+    background-color: #FFF1E6;
+    color: #5A4A42;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Linkler */
+a {
+    color: #D79A7E;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Work Sans', sans-serif;
+}
+
+a:hover {
+    color: #F5C9B8;
+}
+
+/* Footer */
+footer {
+    background-color: #FAF5F0;
+    color: #A0897E;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 8px rgba(215, 154, 126, 0.3);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #D79A7E, #F5C9B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-card {
+    background-color: #ffffff;
+    border: 2px solid #F3D6C9;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 30px rgba(215, 154, 126, 0.15);
+}
+
+.about-card a {
+    color: #D79A7E;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.about-card a:hover {
+    text-decoration: underline;
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 5px solid #F3D6C9;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(215, 154, 126, 0.25);
+}
+
+.profile-card {
+    background-color: #FFF8F2;
+    border: 2px solid #F5C9B8;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(215, 154, 126, 0.2);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.profile-link {
+    text-decoration: none;
+}
+
+/* Experience Sayfası - Özel Kart Teması */
+.card.experience-card {
+    background: #FFF5F0;
+    color: #5A4A42;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(215, 154, 126, 0.25);
+    transition: transform 0.3s ease;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.card.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(215, 154, 126, 0.35);
+}
+
+/* Gönüllü kartı için varyasyon */
+.card.experience-card.volunteer {
+    background: #FDEADA;
+    box-shadow: 0 8px 25px rgba(215, 154, 126, 0.2);
+}
+
+/* Kart logoları */
+.card-logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: block;
+    margin-bottom: 1.5rem; /* Logonun altına ekstra boşluk */
+}
+
+.card-logo:hover {
+    transform: scale(1.08);
+}
+
+
+.card-subtitle {
+    font-size: 0.9rem;      /* Alt başlık daha küçük */
+    font-weight: 600;      /* Daha kalın, belirgin */
+    color: #555555;        /* Daha açık gri ton */
+    margin-top: 1rem;    /* Üstten boşluk ekleyerek alt başlık olduğunu vurgular */
+    margin-bottom: 1rem;   /* Altından boşluk ile altındaki yazıdan ayrılır */
+    display: block;        /* Alt başlık olarak satır içi değil blok yapalım */
+}
+
+.card.volunteer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(215, 154, 126, 0.5);
+}
+.education-row {
+  display: flex;
+  gap: 20px; /* Kartlar arasında yatay boşluk */
+  flex-wrap: wrap; /* Küçük ekranlarda alt alta geçiş */
+  justify-content: center; /* Ortalanması için */
+}
+
+.col-education {
+  flex: 1 1 300px; /* Esnek genişlik, minimum 300px */
+  max-width: 350px; /* Maksimum genişlik */
+}
+
+.education-card {
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(215, 154, 126, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #FFF8F2;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(215, 154, 126, 0.5);
+}
+/* Ortak beyaz kart stili */
+.white-card {
+    background-color: #fff;
+    border-radius: 1rem; /* .rounded-4 karşılığı */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.white-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+/* filename: css/site.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+.no-select,
+.no-select * {
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+ */
+  user-select: none;         /* standart */
+}
+
+.navbar .nav-link.no-select {
+  color: #ffffff !important; /* beyaz metin */
+  transition: background-color .15s ease;
+}
+

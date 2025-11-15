@@ -23,9 +23,7 @@
             <li class="nav-item"><a class="nav-link text-dark" href="index.html">About Me</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="education.html">Education</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="experience.html">Experience</a></li>
-            <li class="nav-item">
-              <a class="nav-link no-select">Skills</a>
-            </li>
+            <li class="nav-item"><a class="nav-link no-select active">Skills & Competencies</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="projects.html">Projects</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
           </ul>
@@ -35,52 +33,67 @@
   </header>
 
   <main class="container mt-5 mb-5">
-    <h2 class="text-center mb-5">Skills & Competencies</h2>
+    <h2 class="text-center mb-4">Skills & Competencies</h2>
 
-    <!-- Programming & Tech -->
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h4 class="card-title mb-3">Programming Languages & Technologies</h4>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Python (Basic)</li>
-              <li class="list-group-item">Java (OOP)</li>
-              <li class="list-group-item">C, C++</li>
-              <li class="list-group-item">JavaScript (React, Node.js, Express.js)</li>
-              <li class="list-group-item">TypeScript</li>
-              <li class="list-group-item">HTML, CSS, SCSS, Bootstrap</li>
-              <li class="list-group-item">PHP (Laravel)</li>
-              <li class="list-group-item">Unity (Real-Time Game Development)</li>
-              <li class="list-group-item">Strapi, Odoo (ERP Systems)</li>
-              <li class="list-group-item">XML, MySQL</li>
-              <li class="list-group-item">Git & GitHub</li>
-            </ul>
+    <ul class="nav nav-pills justify-content-center mb-4" id="skillsSubNav" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="skills-tab" data-bs-toggle="pill" data-bs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="true">Skills</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="languages-tab" data-bs-toggle="pill" data-bs-target="#languages" type="button" role="tab" aria-controls="languages" aria-selected="false">Language Proficiency</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="certificates-tab" data-bs-toggle="pill" data-bs-target="#certificates" type="button" role="tab" aria-controls="certificates" aria-selected="false">Certificates</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="skillsSubNavContent">
+      <!-- Skills Tab -->
+      <div class="tab-pane fade show active" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+        <div class="row g-4">
+          <!-- Programming & Tech -->
+          <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3">Programming Languages & Technologies</h4>
+                <ul class="list-group list-group-flush list-group-horizontal flex-wrap">
+                  <li class="list-group-item">Python</li>
+                  <li class="list-group-item">Java</li>
+                  <li class="list-group-item">C, C++</li>
+                  <li class="list-group-item">JavaScript (React, Node.js, Express.js)</li>
+                  <li class="list-group-item">TypeScript</li>
+                  <li class="list-group-item">HTML, CSS, SCSS, Bootstrap</li>
+                  <li class="list-group-item">PHP (Laravel)</li>
+                  <li class="list-group-item">Unity (Real-Time Game Development)</li>
+                  <li class="list-group-item">Strapi, Odoo (ERP Systems)</li>
+                  <li class="list-group-item">XML, MySQL</li>
+                  <li class="list-group-item">Git & GitHub</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design Tools -->
+          <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3">Design Tools & Development Platforms</h4>
+                <ul class="list-group list-group-flush list-group-horizontal flex-wrap">
+                  <li class="list-group-item">Blender (3D & Graphic Design)</li>
+                  <li class="list-group-item">Adobe Photoshop / Illustrator (Intermediate)</li>
+                  <li class="list-group-item">Microsoft Office Suite (Advanced)</li>
+                  <li class="list-group-item">Postman, MinIO</li>
+                  <li class="list-group-item">VS Code, IntelliJ IDEA</li>
+                  <li class="list-group-item">Linux Terminal</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Design Tools -->
-      <div class="col-md-6">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body">
-            <h4 class="card-title mb-3">Design Tools & Development Platforms</h4>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Blender (3D & Graphic Design)</li>
-              <li class="list-group-item">Adobe Photoshop / Illustrator (Intermediate)</li>
-              <li class="list-group-item">Microsoft Office Suite (Advanced)</li>
-              <li class="list-group-item">Postman, MinIO</li>
-              <li class="list-group-item">VS Code, IntelliJ IDEA</li>
-              <li class="list-group-item">Linux Terminal</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Language Proficiency -->
-    <div class="row mt-5">
-      <div class="col-md-12">
+      <!-- Language Proficiency Tab -->
+      <div class="tab-pane fade" id="languages" role="tabpanel" aria-labelledby="languages-tab">
         <div class="card shadow-sm border-0">
           <div class="card-body">
             <h4 class="card-title mb-3">Language Proficiency</h4>
@@ -104,11 +117,11 @@
                   </tr>
                   <tr>
                     <td><strong>English</strong></td>
+                    <td>C1+</td>
+                    <td>C1+</td>
                     <td>C1</td>
-                    <td>C1</td>
-                    <td>B2</td>
-                    <td>C1</td>
-                    <td>-</td>
+                    <td>B2+</td>
+                    <td>International English Language Testing System / Total: 7.5 (C1)</td>
                   </tr>
                   <tr>
                     <td><strong>French</strong></td>
@@ -124,13 +137,10 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Certificates -->
-    <div class="row mt-5">
-      <div class="col-md-12">
-        <h4 class="mb-4">Certificates</h4>
-        <div class="accordion" id="certificatesAccordion">
+      <!-- Certificates Tab -->
+      <div class="tab-pane fade" id="certificates" role="tabpanel" aria-labelledby="certificates-tab">
+        <div class="accordion mt-3" id="certificatesAccordion">
 
           <div class="accordion-item">
             <h2 class="accordion-header" id="cert1-heading">
@@ -170,7 +180,7 @@
             <div id="cert3" class="accordion-collapse collapse" aria-labelledby="cert3-heading" data-bs-parent="#certificatesAccordion">
               <div class="accordion-body">
                 <strong>Level:</strong> A2<br />
-                <strong>Location:</strong> Istanbul, Türkiye
+                <strong>Location:</strong> Famagusta, Cyprus
               </div>
             </div>
           </div>
@@ -184,7 +194,7 @@
             <div id="cert4" class="accordion-collapse collapse" aria-labelledby="cert4-heading" data-bs-parent="#certificatesAccordion">
               <div class="accordion-body">
                 <strong>EQF Level:</strong> 5<br />
-                <strong>Location:</strong> Strasbourg, France<br />
+                <strong>Location:</strong> Istanbul, Turkey<br />
                 <strong>Verify:</strong> <a href="https://www.coursera.org/account/accomplishments/specialization/HD25XCHMU9X9" target="_blank">View Certificate</a>
               </div>
             </div>
@@ -199,7 +209,7 @@
             <div id="cert5" class="accordion-collapse collapse" aria-labelledby="cert5-heading" data-bs-parent="#certificatesAccordion">
               <div class="accordion-body">
                 Participated in youth program of the European Parliament.<br />
-                <strong>Location:</strong> Istanbul, Türkiye<br />
+                <strong>Location:</strong> Strasbourg, France<br />
                 <strong>Website:</strong> <a href="https://youth.europarl.europa.eu/more-information/euroscola.html" target="_blank">Learn More</a>
               </div>
             </div>

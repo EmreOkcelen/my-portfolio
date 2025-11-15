@@ -1,6 +1,17 @@
 /* Font: Work Sans */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
 
+:root{
+  --deep: #5A4A42;      /* ana koyu metin */
+  --accent: #D79A7E;    /* başlık / vurgu */
+  --bg-soft: #FFF8F2;   /* kart/arka plan */
+  --btn: #F5C9B8;       /* buton ana */
+  --nav-dark-bg: #5A4A42;/* koyu nav arka plan (varsa) */
+  --nav-text-light: #FFF8F2; /* koyu arka planlarda okunur metin */
+  --nav-text-dark: #5A4A42;  /* açık arka planda okunur metin */
+  --muted: #A0897E;     /* footer gibi */
+}
+
 /* Genel */
 html, body {
   margin: 0; padding: 0;
@@ -68,23 +79,28 @@ h1, h2, h3, h4 {
     font-family: 'Work Sans', sans-serif;
 }
 
-/* Butonlar */
 .btn-primary {
-    background-color: #F5C9B8; /* yumuşak şampanya pembesi */
-    border: none;
-    color: #5A4A42;
-    font-weight: 700;
-    padding: 10px 25px;
-    border-radius: 30px;
-    box-shadow: 0 6px 12px rgba(215, 154, 126, 0.4);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Work Sans', sans-serif;
+  background-color: var(--btn);
+  border: none;
+  color: var(--deep);
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 30px;
+  box-shadow: 0 6px 12px rgba(215, 154, 126, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #D79A7E; /* koyu şampanya pembesi */
     box-shadow: 0 10px 25px rgba(215, 154, 126, 0.6);
     cursor: pointer;
+}
+
+/* Eğer koyu buton da istiyorsan: */
+.btn-dark {
+  background-color: #444547;
+  border-color: #444547;
+  color: #fff;
 }
 
 /* Form input focus */
@@ -96,16 +112,15 @@ h1, h2, h3, h4 {
     font-family: 'Work Sans', sans-serif;
 }
 
-/* Linkler */
 a {
-    color: #D79A7E;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-family: 'Work Sans', sans-serif;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Work Sans', sans-serif;
 }
 
 a:hover {
-    color: #F5C9B8;
+  color: var(--btn);
 }
 
 /* Footer */
@@ -284,20 +299,54 @@ a.navbar-brand {
 }
 
 a {
-  color: #0077cc;
+  color: #444547;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: black;
+  background-color: #444547;
+  border-color: #444547;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+/* Nav-pills: varsayılan koyu arka plan, beyaz metin; hover hafif açılır; seçili (active) durumda kelime kesin beyaz */
+.nav-pills .nav-link,
+.nav-pills .nav-link:link,
+.nav-pills .nav-link:visited {
+  color: black !important;                /* metin beyaz (okunur) */
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 0.15rem;
+  padding: 0.5rem 0.9rem;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
+
+/* Hover: biraz daha açık bir ton, küçük yükselme efekti */
+.nav-pills .nav-link:hover {
+  background-color: rgba(68, 68, 71, 0.9); /* var(--nav-dark-bg) biraz açılmış hali */
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* Aktif/seçili durumda: arka plan daha koyu veya vurgu rengi, içindeki kelime beyaz */
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.show {
+  background-color: var(--nav-dark-bg); /* koyu arka plan */
+  color: #fff !important;            /* kesin beyaz olarak kalır */
+  font-weight: 700 !important;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  border-bottom: 3px solid #111 !important;
+}
+
+/* Eğer nav içindeki butonların iç metni ayrı bir <span> ile sarılıysa (örnek: <a><span>Metin</span></a>) */
+/* bu durumda kesin beyazlık için şu ekstra kuralı da ekleyebilirsin: */
+.nav-pills .nav-link.active span,
+.nav-pills .nav-link.show span {
+  color: #fff !important;
+}
+
 
 .border-top {
   border-top: 1px solid #e5e5e5;
@@ -334,5 +383,84 @@ button.accept-policy {
 .navbar .nav-link.no-select {
   color: #ffffff !important; /* beyaz metin */
   transition: background-color .15s ease;
+}
+
+/* Accordion içindeki tüm linklere tutarlı "verify badge on hover" davranışı */
+.accordion-body a,
+.accordion-body a.verify-link {
+  display: inline-block;
+  color: var(--deep);
+  font-weight: 700;
+  padding: 6px 10px;               /* normalde de padding var => hover sırasında kayma olmaz */
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .18s ease, color .15s ease, transform .12s ease, box-shadow .18s ease;
+  border: none;
+  box-shadow: none;
+}
+
+/* Hover: koyu arka plan, beyaz metin, hafif yükselme */
+.accordion-body a:hover,
+.accordion-body a.verify-link:hover {
+  background: var(--nav-dark-bg);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  text-decoration: none;
+}
+
+/* Dokunmatik cihazlar için :active/de-focus davranışı (isteğe bağlı) */
+.accordion-body a:active,
+.accordion-body a:focus {
+  outline: none;
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Tercih edilen animasyon azaltma (erişilebilirlik) */
+@media (prefers-reduced-motion: reduce) {
+  .accordion-body a,
+  .accordion-body a.verify-link {
+    transition: none;
+  }
+  .accordion-body a:hover,
+  .accordion-body a.verify-link:hover {
+    transform: none;
+  }
+}
+
+
+/* Skills listesi - öğeleri yan yana ve alt satıra geçebilir şekilde */
+.card-body ul.list-group {
+  display: flex;
+  flex-wrap: wrap;       /* öğeler alt satıra geçebilir */
+  gap: 8px;              /* öğeler arası boşluk */
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.card-body ul.list-group li.list-group-item {
+  flex: 0 1 auto;        /* genişlik içeriğe göre, taşarsa alt satıra geçer */
+  display: inline-block;  /* yan yana durmasını sağlar */
+  white-space: nowrap;    /* çok uzun isimler satırı bozmasın */
+  background-color: #fff;
+  color: var(--deep);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(215,154,126,0.2);
+  list-style: none;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-body ul.list-group li.list-group-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(215,154,126,0.3);
+}
+.list-group-horizontal li {
+  display: inline-flex; /* veya inline-block */
+  margin-right: 0.1rem; /* sağ boşluk */
+  margin-bottom: 0.2rem; /* alt satır boşluğu için */
 }
 
